@@ -50,7 +50,7 @@
                                 @foreach ($products as $item)
                                     <tr class="item{{ $item->id }}">
                                         <td class="">{{ $item->product_name }}</td>
-                                        <td class="">{{ $item->procate_name }}</td>
+                                        <td class="">{{ $item->product_category->procate_name }}</td>
                                         <td class="actionBtn">
                                             <button type="button" class="btn btn-dark mr-3 btn-sm"
                                                 onclick="viewItem({{ $item->id }})">
@@ -82,7 +82,7 @@
 
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="noteModal">Add New Category</h5>
+                                <h5 class="modal-title" id="noteModal">Add New Product</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -208,7 +208,7 @@
                                             <div class="mb-3">
                                                 <label for="category" class="form-label">Category Name</label>
                                                 <select required class="form-control form-control-sm" id="edit_category" name="edit_category">
-                                                    <option>Select Category</option>
+                                                    <option disabled>Select Category</option>
                                                     @foreach($categories as $category)
 
                                                     <option value="{{$category->id}}">{{$category->procate_name}}</option>

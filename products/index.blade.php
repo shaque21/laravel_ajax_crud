@@ -106,7 +106,7 @@
                                             <div class="mb-3">
                                                 <label for="category" class="form-label">Category Name</label>
                                                 <select required class="form-control form-control-sm" name="category">
-                                                    <option>Select Category</option>
+                                                    <option value="">Select Category</option>
                                                     @foreach($categories as $category)
 
                                                     <option value="{{$category->id}}">{{$category->procate_name}}</option>
@@ -208,7 +208,7 @@
                                             <div class="mb-3">
                                                 <label for="category" class="form-label">Category Name</label>
                                                 <select required class="form-control form-control-sm" id="edit_category" name="edit_category">
-                                                    <option disabled>Select Category</option>
+                                                    <option value="">Select Category</option>
                                                     @foreach($categories as $category)
 
                                                     <option value="{{$category->id}}">{{$category->procate_name}}</option>

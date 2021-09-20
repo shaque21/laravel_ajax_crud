@@ -11,9 +11,14 @@ class ProductController extends Controller
 {
     public function index(){
 
-        $products = DB::table('products')
-            ->join('product_categories','product_categories.id','products.procate_id')
-            ->get();
+        // $products = DB::table('products')
+        //     ->join('product_categories','product_categories.id','products.procate_id')
+        //     ->orderBy('products.id','DESC')
+        //     ->get();
+        $products = Product::orderBy('id','DESC')->get();
+
+        // $data['product_name'] = $products
+            // dd($products);
         return view('admin.products.index',compact('products'));
     }
 
